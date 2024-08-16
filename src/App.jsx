@@ -40,9 +40,11 @@ function App() {
     <div className='App'>
       <h1>Deporte favorito</h1>
       <form onSubmit={onSubmitHandler}>
+        <label htmlFor="">Nombre</label>
         <input type="text" onChange={onChangeName}/>
+        <label htmlFor="">Deporte</label>
         <input type="text" onChange={onChangeSport}/>
-        <button type='submit'></button>
+        <button type='submit'>Enviar</button>
       </form>
       {showCard == true ? <Card name={sport.name} sportFav={sport.sportFav}/> : ""}
       {showError == true ? <h4>Por favor chequea que la informacion sea correcta</h4>: ""}
